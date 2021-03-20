@@ -3,7 +3,7 @@ package org.toroder.JavaAnchor;
 
 import io.javalin.Javalin;
 import org.toroder.JavaAnchor.Api.GetPublicFile;
-import org.toroder.JavaAnchor.Api.GetPublicTree;
+import org.toroder.JavaAnchor.Api.ServerPublicDataIndex;
 
 
 public class Main {
@@ -11,7 +11,7 @@ public class Main {
         Javalin server = Javalin.create().start("0.0.0.0", 9091);
         final String version = "v0";
         final String perfix = "/api/".concat(version).concat("/");
-        server.get(perfix.concat("/public/index"), new GetPublicTree());
+        server.get(perfix.concat("/public/index"), new ServerPublicDataIndex());
         server.get(perfix.concat("/public/file"), new GetPublicFile());
     }
 }

@@ -10,7 +10,7 @@ import org.toroder.JavaAnchor.GlobalState;
 
 import java.io.File;
 
-public class GetPublicTree implements Handler {
+public class ServerPublicDataIndex implements Handler {
     @Override
     public void handle(@NotNull Context context) throws Exception {
         final String transformJsonString = ResultPackage.create(STATECODE.RES_OK.code, GlobalState.getOnly().getFsElemTree().toJson(), "");
