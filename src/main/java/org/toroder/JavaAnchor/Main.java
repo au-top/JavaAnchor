@@ -2,7 +2,7 @@ package org.toroder.JavaAnchor;
 
 
 import io.javalin.Javalin;
-import org.toroder.JavaAnchor.Api.GetPublicFile;
+import org.toroder.JavaAnchor.Api.GetServerPublicData;
 import org.toroder.JavaAnchor.Api.ServerPublicDataIndex;
 
 
@@ -12,6 +12,6 @@ public class Main {
         final String version = "v0";
         final String perfix = "/api/".concat(version).concat("/");
         server.get(perfix.concat("/public/index"), new ServerPublicDataIndex());
-        server.get(perfix.concat("/public/file"), new GetPublicFile());
+        server.get(perfix.concat("/public/file"), new GetServerPublicData());
     }
 }

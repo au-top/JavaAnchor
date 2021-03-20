@@ -10,7 +10,7 @@ import org.toroder.JavaAnchor.GlobalState;
 
 import java.util.Arrays;
 
-public class GetPublicFile implements Handler {
+public class GetServerPublicData implements Handler {
 
     @Override
     public void handle(@NotNull Context context) throws Exception {
