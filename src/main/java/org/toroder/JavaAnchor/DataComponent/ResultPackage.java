@@ -1,7 +1,6 @@
 package org.toroder.JavaAnchor.DataComponent;
 
 import com.alibaba.fastjson.JSON;
-
 import java.util.HashMap;
 
 public class ResultPackage {
