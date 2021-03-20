@@ -13,7 +13,7 @@ import java.io.File;
 /**
  * @author autopMateBook
  */
-public class ServerPublicDataIndex implements Handler {
+public class GetServerPublicDataIndex implements Handler {
     @Override
     public void handle(@NotNull Context context) throws Exception {
         final String transformJsonString = ResultPackage.create(StateCode.RES_OK.code, GlobalState.getOnly().getFsElemTree().toJson(), "");
