@@ -9,7 +9,7 @@ import java.util.*;
 
 
 
-enum FSELEMTYPE {
+enum FsElemType {
     /*
      * FILE is File Type
      * Dir is Dir Type
@@ -20,7 +20,7 @@ enum FSELEMTYPE {
     public int code;
     public String message;
 
-    FSELEMTYPE(int code, String message) {
+    FsElemType(int code, String message) {
         this.code = code;
         this.message = message;
     }
@@ -32,14 +32,14 @@ enum FSELEMTYPE {
  */
 public class FsElem {
     File fileElem;
-    FSELEMTYPE type;
+    FsElemType type;
     ArrayList<FsElem> childElemList = null;
     HashMap<String, FsElem> childElemMap = null;
 
 
     public FsElem(File fileElem) {
         this.fileElem = fileElem;
-        this.type = fileElem.isDirectory() ? FSELEMTYPE.DIR : FSELEMTYPE.FILE;
+        this.type = fileElem.isDirectory() ? FsElemType.DIR : FsElemType.FILE;
         this.childElemList = new ArrayList<FsElem>() {
         };
         switch (this.type) {

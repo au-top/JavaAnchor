@@ -16,7 +16,7 @@ import java.io.File;
 public class ServerPublicDataIndex implements Handler {
     @Override
     public void handle(@NotNull Context context) throws Exception {
-        final String transformJsonString = ResultPackage.create(STATECODE.RES_OK.code, GlobalState.getOnly().getFsElemTree().toJson(), "");
+        final String transformJsonString = ResultPackage.create(StateCode.RES_OK.code, GlobalState.getOnly().getFsElemTree().toJson(), "");
 
         context.result(transformJsonString);
     }

@@ -25,11 +25,11 @@ public class GetServerPublicData implements Handler {
             final FsElem target = fsElemTree.fromPathGetChildElem(reqPath);
             if (target != null) {
                 final String base64TypeContent=target.getFileContent(true);
-                context.result(ResultPackage.create(STATECODE.RES_OK.code,base64TypeContent, ""));
+                context.result(ResultPackage.create(StateCode.RES_OK.code,base64TypeContent, ""));
                 return;
             }
         }
         System.out.println("req Path is Null");
-        context.result(ResultPackage.create(STATECODE.RES_ERROR_PATH_FIND_NOT.code, new Object(), "is not file "));
+        context.result(ResultPackage.create(StateCode.RES_ERROR_PATH_FIND_NOT.code, new Object(), "is not file "));
     }
 }
