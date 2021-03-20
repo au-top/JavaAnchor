@@ -7,8 +7,13 @@ import java.io.*;
 import java.nio.file.Files;
 import java.util.*;
 
-enum FSELEMTYPE {
 
+
+enum FSELEMTYPE {
+    /*
+     * FILE is File Type
+     * Dir is Dir Type
+     * */
     FILE(0, "File"),
     DIR(1, "Dir");
 
@@ -22,6 +27,9 @@ enum FSELEMTYPE {
 
 }
 
+/**
+ * @author autopMateBook
+ */
 public class FsElem {
     File fileElem;
     FSELEMTYPE type;

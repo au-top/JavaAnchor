@@ -10,6 +10,9 @@ import org.toroder.JavaAnchor.GlobalState;
 
 import java.io.File;
 
+/**
+ * @author autopMateBook
+ */
 public class ServerPublicDataIndex implements Handler {
     @Override
     public void handle(@NotNull Context context) throws Exception {

@@ -10,6 +10,9 @@ import org.toroder.JavaAnchor.GlobalState;
 
 import java.util.Arrays;
 
+/**
+ * @author autopMateBook
+ */
 public class GetServerPublicData implements Handler {
 
     @Override

@@ -6,6 +6,9 @@ import org.toroder.JavaAnchor.Api.GetServerPublicData;
 import org.toroder.JavaAnchor.Api.ServerPublicDataIndex;
 
 
+/**
+ * @author autopMateBook
+ */
 public class Main {
     public static void main(String[] args) {
         Javalin server = Javalin.create().start("0.0.0.0", 9091);
