@@ -2,15 +2,16 @@ package org.toroder.JavaAnchor;
 
 
 import io.javalin.Javalin;
-
+import org.toroder.JavaAnchor.Api.GetPublicFile;
+import org.toroder.JavaAnchor.Api.GetPublicTree;
 
 
 public class Main {
     public static void main(String[] args) {
         Javalin server = Javalin.create().start("0.0.0.0", 9091);
-        server.get("/api/v0/helloworld", new ShowSrcDir());
+        final String version = "v0";
+        final String perfix = "/api/".concat(version).concat("/");
+        server.get(perfix.concat("/public/index"), new GetPublicTree());
+        server.get(perfix.concat("/public/file"), new GetPublicFile());
     }
 }
-
-
-
