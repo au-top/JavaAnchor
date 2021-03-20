@@ -18,9 +18,7 @@ public class GlobalState {
         return FsElemTree;
     }
 
-    private GlobalState() {
-        GlobalState.onlyElem = this;
-    }
+    private GlobalState() { }
 
     public static GlobalState getOnly() {
         if (GlobalState.onlyElem == null) {
