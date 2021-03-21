@@ -17,10 +17,8 @@ public class GetServerPublicData implements Handler {
 
     @Override
     public void handle(@NotNull Context context) throws Exception {
-        context.req.getContextPath();
         final String reqPath = context.queryParam("path");
         if (reqPath != null) {
-            System.out.println(reqPath);
             final FsElem fsElemTree = GlobalState.getOnly().getFsElemTree();
             final FsElem target = fsElemTree.fromPathGetChildElem(reqPath);
             if (target != null) {

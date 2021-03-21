@@ -14,15 +14,15 @@ enum FsElemType {
      * FILE is File Type
      * Dir is Dir Type
      * */
-    FILE(0, "File"),
-    DIR(1, "Dir");
+    DIR(0, "Dir"),
+    FILE(1, "File");
 
     public int code;
-    public String message;
+    public String explain;
 
-    FsElemType(int code, String message) {
+    FsElemType(int code, String explain) {
         this.code = code;
-        this.message = message;
+        this.explain = explain;
     }
 
 }
@@ -83,7 +83,7 @@ public class FsElem {
 
     public JSONObject toJson() {
         final JSONObject toJsonObj = new JSONObject();
-        toJsonObj.put("type", this.type);
+        toJsonObj.put("type", this.type.code);
         toJsonObj.put("name", this.fileElem.getName());
         ArrayList<JSONObject> childList = new ArrayList<JSONObject>();
         for (final FsElem nextFsElem : this.childElemList) {
